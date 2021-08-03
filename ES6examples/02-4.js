@@ -22,11 +22,3 @@ console.log(others);
 console.log(other);
 
 //homework4
-var person={
-    name:"Anderson",
-    age:"28",
-    job:"thief",
-    country:"Germany",    
-    status:"pugnatious"
-};
-console.log(...person);
