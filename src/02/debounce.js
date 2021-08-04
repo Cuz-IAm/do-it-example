@@ -5,13 +5,19 @@
 //네이버나 구글의 검색창에서 내용을 입력할 때는 아무내용도 나오지 않다가
 //멈추면 연관검색어 목록이 나타나는 것이 디바운스로 구현한 기능이다.
 
+//입력과 동시에 지연함수를 실행하되
+//만약에 대기시간 중간에 입력이 들어오면 대기를 멈추고 새롭게 지연함수를 실행하도록 한다.
 export function debounce(func, delay) {
   let inDebounce;
   return function (...args) {
     if (inDebounce) {
       clearTimeout(inDebounce);
     }
-
     inDebounce = setTimeout(() => func(...args), delay);
   };
 }
+const run=debounce(val=>console.log(val),100);
+run('a');
+run('b');
+run(2);
+//2출력
