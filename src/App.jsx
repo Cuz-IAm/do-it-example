@@ -1,12 +1,14 @@
 import React from 'react';
-import TodaysPlan from './03/TodaysPlan';
+import DefaultPropsComponent from './03/DefaultPropsComponent';
+
 class App extends React.Component {
   render() {
     return (
-      <div className="body">
-        <TodaysPlan />
+      <div>
+        <DefaultPropsComponent />
       </div>
     );
   }
 }
+
 export default App;
