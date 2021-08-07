@@ -44,15 +44,24 @@ let book = {
 let { title: a, writer: b, price: c } = book;
 console.log(a, b, c); //result: God Bernard werber 21000
 
-//ex7(기본값 설정)
+//ex7(기본값 설정,프로퍼티가 없는 경우에 대비한다.)
 let book = {
   title: 'God',
   writer: 'Bernard werber',
   price: '21000',
 };
-let { title = 'Ants', price } = book;
-console.log(a, b, c); //result: God Bernard werber 21000
+let { another = 'Ants', price } = book;
+console.log(another, price); //result: God Bernard werber 21000
 //homework1(rest parameter)
 let [a, b, ...c] = '12345';
 console.log(a, b, c);
 console.log(a, b, ...c);
+
+//homework2(콜론과 대입연산자 동시사용)
+let book = {
+  title: 'God',
+  writer: 'Bernard werber',
+  price: '21000',
+};
+let { pages: pg = 220, title, price } = book;
+console.log(title, price, pg); //result: God 21000 220
