@@ -65,3 +65,4 @@ let book = {
 };
 let { pages: pg = 220, title, price } = book;
 console.log(title, price, pg); //result: God 21000 220
+//good
